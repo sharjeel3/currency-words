@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Words.Server", "Words.Server\Words.Server.csproj", "{7627CD64-5E73-489B-A76C-E0CBC73D5F0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Words.Server", "Words.Server\Words.Server.csproj", "{7627CD64-5E73-489B-A76C-E0CBC73D5F0E}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "words.client", "words.client\words.client.esproj", "{E46C046E-A88A-46AE-8614-5D2C394CE1BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{B3BD0A5C-8691-4C99-B081-DBEA279F93B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{B3BD0A5C-8691-4C99-B081-DBEA279F93B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC133087-AC8B-4875-8588-1FF10F549E24}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

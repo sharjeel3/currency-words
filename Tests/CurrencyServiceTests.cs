@@ -1,19 +1,19 @@
 ﻿using Words.Server.Services;
-using FluentAssertions;
 using Words.Server.Services.Translation;
+using FluentAssertions;
 
 namespace Tests;
 
 public class CurrencyServiceTests
 {
-    private readonly ICurrencyService _currencyService;
+    private readonly CurrencyService _currencyService;
 
     public CurrencyServiceTests()
     {
         ITranslationService translationService = new TranslationService();
-        TranslateHundredsStrategy translateHundredsStrategy = new TranslateHundredsStrategy(translationService);
-        TranslateThousandsStrategy translateThousandsStrategy = new TranslateThousandsStrategy(translationService);
-        TranslateCentsStrategy translateCentsStrategy = new TranslateCentsStrategy(translationService);
+        TranslateHundredsStrategy translateHundredsStrategy = new(translationService);
+        TranslateThousandsStrategy translateThousandsStrategy = new(translationService);
+        TranslateCentsStrategy translateCentsStrategy = new(translationService);
 
         _currencyService = new CurrencyService(translateHundredsStrategy,
             translateThousandsStrategy, translateCentsStrategy);

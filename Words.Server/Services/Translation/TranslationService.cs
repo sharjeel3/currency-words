@@ -38,10 +38,13 @@ public class TranslationService : ITranslationService
         { 1000000000, "billion" },
         { 1000000000000, "trillion" },
     };
-
+    
     public string GetDictionaryLookup(CurrencyToken token)
     {
-        return _englishDictionary[token.Value];
+        if (_englishDictionary.TryGetValue(token.Value, out _))
+            return _englishDictionary[token.Value];
+
+        return "";
     }
 
     public string TranslateNumber(CurrencyToken token)
