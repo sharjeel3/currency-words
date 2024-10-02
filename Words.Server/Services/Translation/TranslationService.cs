@@ -49,16 +49,16 @@ public class TranslationService : ITranslationService
 
     public string TranslateNumber(CurrencyToken token)
     {
-        string r;
+        string res;
 
         if (token.Value.ToString().Length > 2)
-            r = TranslateHundreds(token);
+            res = TranslateHundreds(token);
         else if (token.Value.ToString().Length > 1)
-            r = TranslateTens(token);
+            res = TranslateTens(token);
         else
-            r = TranslateSingles(token);
+            res = TranslateSingles(token);
 
-        return r;
+        return res;
     }
 
     private string TranslateHundreds(CurrencyToken token)

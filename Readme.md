@@ -27,6 +27,7 @@ This solution is built with .NET and React. We need following runtimes installed
 Visual Studio should be able to detect the launch profiles on load.
 
 The UI is hosted at https://localhost:5173/
+
 The API swagger is hosted at https://localhost:7172/swagger/index.html
 
 We want to run Multiple Projects including `Words.Server` and `words.client` on Start. If this is not the case, please use `Configure Startup Projects` option under the profiles options at `Start` dropdown.
@@ -49,8 +50,11 @@ From complexity perspective, we're not using any nested loops. We process chunks
 For example, let's consider the input `212456.34`;
 
 **Step 1:** Get the dollars and the cents parts such as `212456` and `34`
+
 **Step 2:** Get the chunks from `212456` which will be `212` and `456`
+
 **Step 3:** Translate each chunk using a dedicated strategy
+
 **Step 4:** Translate the cents using a dedicated strategy
 
 The strategies are created based on whether we're working with one of these:
@@ -77,7 +81,7 @@ Please note that there're a number of items I'd improve in case of having an app
 
 Some pending tasks include:
 
-- Input sanitisation and handling of bad data
+- Input sanitisation and handling of bad data including FluentValidation
 - Detailed error handling and logging
 - Auth setup
 - UI polishing
