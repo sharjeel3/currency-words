@@ -1,0 +1,21 @@
+.root {
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-weight: bold;
+    display: block;
+}
+
+.input {
+    border: none;
+    border-bottom: 0.1rem solid grey;
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem 0;
+    outline: none;
+
+    &:focus-visible {
+        border-bottom-color: #df6c00;
+    }
+}
